@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta | La Malcriada Benalmádena</title>
+    <meta name="description" content="Carta completa de La Malcriada Benalmádena. Tapas, platos, bebidas, cervezas y cócteles.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,700&family=Lora:ital,wght@0,400;0,500;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --accent:      #C4853A;
+            --accent-dark: #A06A28;
+            --accent-faint:rgba(196,133,58,0.09);
+            --pink:        #E91E8C;
+            --charcoal:    #12182B;
+            --cream:       #F5EEE0;
+            --cream-dark:  #EAE0CC;
+            --white:       #FFFFFF;
+            --gray:        #8C8070;
+            --mid:         #5E5448;
+            --font-display: 'Fraunces', Georgia, serif;
+            --font-serif:   'Lora', Georgia, serif;
+            --font-sans:    'Outfit', sans-serif;
+        }
+        html { font-optical-sizing: auto; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--cream);
+            color: var(--charcoal);
+            font-family: var(--font-sans);
+            font-weight: 300;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ── NAV ── */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--cream);
+            box-shadow: 0 1px 0 rgba(0,0,0,0.07);
+        }
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            text-decoration: none;
+        }
+        .nav-logo-img {
+            width: 40px; height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center 20%;
+            border: 1.5px solid var(--accent);
+        }
+        .nav-brand-name {
+            font-family: var(--font-display);
+            font-weight: 900;
+            font-size: 1.05rem;
+            color: var(--charcoal);
+            letter-spacing: 0.02em;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            font-family: var(--font-sans);
+            font-size: 0.74rem;
+            font-weight: 400;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var(--gray);
+            transition: color 0.3s;
+        }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+        .nav-cta {
+            border: 1px solid var(--accent) !important;
+            color: var(--accent) !important;
+            padding: 0.45rem 1.1rem;
+            border-radius: 2px;
+        }
+        .nav-cta:hover { background: var(--accent) !important; color: var(--charcoal) !important; }
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0.5rem;
+        }
+        .menu-toggle span { display: block; width: 24px; height: 1.5px; background: var(--charcoal); }
+
+        /* ── PAGE HERO ── */
+        .page-hero {
+            background: var(--charcoal);
+            padding: 4rem 3rem 3rem;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 2px solid var(--accent);
+        }
+        .page-hero-watermark {
+            position: absolute;
+            right: -2%;
+            bottom: -20%;
+            font-family: var(--font-display);
+            font-weight: 900;
+            font-size: clamp(80px, 14vw, 180px);
+            color: rgba(255,255,255,0.025);
+            line-height: 0.85;
+            letter-spacing: -0.04em;
+            pointer-events: none;
+            user-select: none;
+        }
+        .page-hero-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+        .page-hero-logo {
+            width: 100px; height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center 20%;
+            border: 1px solid rgba(244,234,208,0.12);
+            flex-shrink: 0;
+        }
+        .page-hero-text { color: var(--cream); }
+        .page-hero-tag {
+            font-family: var(--font-sans);
+            font-size: 0.62rem;
+            font-weight: 500;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 0.6rem;
+        }
+        .page-hero-title {
+            font-family: var(--font-display);
+            font-weight: 900;
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            line-height: 0.95;
+            letter-spacing: -0.02em;
+            color: var(--cream);
+        }
+        .page-hero-title em { font-style: italic; color: var(--cream); opacity: 0.82; }
+        .page-hero-sub {
+            font-family: var(--font-serif);
+            font-size: 1.05rem;
+            font-style: italic;
+            color: rgba(244,234,208,0.5);
+            margin-top: 0.75rem;
+        }
+
+        /* ── TABS ── */
+        .tabs-bar {
+            background: var(--cream);
+            border-bottom: 1px solid rgba(26,24,20,0.1);
+            position: sticky;
+            top: 65px;
+            z-index: 50;
+        }
+        .tabs-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 3rem;
+            display: flex;
+            gap: 0;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+        .tabs-inner::-webkit-scrollbar { display: none; }
+        .tab-btn {
+            font-family: var(--font-sans);
+            font-size: 0.73rem;
+            font-weight: 400;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+            color: var(--gray);
+            background: none;
+            border: none;
+            border-bottom: 2px solid transparent;
+            padding: 1rem 1.25rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            white-space: nowrap;
+            margin-bottom: -1px;
+        }
+        .tab-btn:hover { color: var(--charcoal); }
+        .tab-btn.active { color: var(--charcoal); border-bottom-color: var(--accent); }
+
+        /* ── MENU CONTENT ── */
+        .menu-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 3rem 5rem;
+        }
+        .menu-section { display: none; }
+        .menu-section.active { display: block; }
+
+        /* ── CATEGORY ── */
+        .cat-block { margin-bottom: 3.5rem; }
+        .cat-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(26,24,20,0.12);
+        }
+        .cat-icon { font-size: 1.4rem; }
+        .cat-title {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.35rem;
+            color: var(--charcoal);
+            letter-spacing: -0.01em;
+        }
+        .cat-title.pink { color: var(--pink); }
+        .cat-header.pink-border { border-bottom-color: rgba(233,30,140,0.12); }
+        .cat-note {
+            font-family: var(--font-serif);
+            font-size: 0.92rem;
+            font-style: italic;
+            color: var(--mid-gray);
+            margin-left: auto;
+            white-space: nowrap;
+        }
+
+        /* ── ITEM ROWS ── */
+        .items-list { display: flex; flex-direction: column; gap: 0; }
+        .item-row {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 1.5rem;
+            padding: 0.95rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            transition: background 0.2s;
+        }
+        .item-row:last-child { border-bottom: none; }
+        .item-row:hover { background: var(--teal-light); margin: 0 -1rem; padding: 0.95rem 1rem; border-radius: 8px; border-bottom-color: transparent; }
+        .item-info { flex: 1; min-width: 0; }
+        .item-name {
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--black);
+            margin-bottom: 0.2rem;
+        }
+        .item-name.featured { color: var(--pink); }
+        .item-detail {
+            font-family: var(--font-serif);
+            font-size: 0.9rem;
+            color: var(--mid-gray);
+            font-style: italic;
+            line-height: 1.4;
+        }
+        .item-price {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--charcoal);
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        .item-price.pink { color: var(--pink); }
+        .item-price.na {
+            color: var(--gray);
+            font-size: 0.8rem;
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        /* TAPAS SPECIAL CALLOUT */
+        .tapas-callout {
+            background: var(--charcoal);
+            color: var(--cream);
+            border-radius: 3px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            border-left: 3px solid var(--accent);
+        }
+        .tapas-callout-icon { font-size: 1.8rem; }
+        .tapas-callout-title {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--cream);
+        }
+        .tapas-callout-sub {
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-size: 0.95rem;
+            color: rgba(244,234,208,0.58);
+            margin-top: 0.2rem;
+        }
+        .tapas-callout-price {
+            margin-left: auto;
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--accent);
+        }
+
+        /* ── DRINKS GRID ── */
+        .drinks-cols {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0 3.5rem;
+        }
+
+        /* ── ALLERGENS ── */
+        .allergens-note {
+            background: var(--cream-dark);
+            border-radius: 2px;
+            padding: 1.25rem 1.75rem;
+            margin-top: 3rem;
+            font-family: var(--font-serif);
+            font-size: 0.95rem;
+            color: var(--mid);
+            font-style: italic;
+            border-left: 2px solid var(--accent);
+        }
+
+        /* ── PAN BAR ── */
+        .pan-bar {
+            background: var(--cream-dark);
+            border: 1px solid rgba(26,24,20,0.12);
+            border-radius: 2px;
+            padding: 1rem 1.75rem;
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .pan-bar-label {
+            font-family: var(--font-sans);
+            font-size: 0.84rem;
+            font-weight: 400;
+            color: var(--mid);
+        }
+        .pan-bar-price {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--charcoal);
+        }
+
+        /* ── BOTTOM CTA ── */
+        .bottom-cta {
+            margin-top: 4rem;
+            background: var(--charcoal);
+            border-radius: 3px;
+            padding: 2.5rem 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            flex-wrap: wrap;
+            border-top: 2px solid var(--accent);
+        }
+        .bottom-cta-text h3 {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--cream);
+            margin-bottom: 0.4rem;
+        }
+        .bottom-cta-text p {
+            font-family: var(--font-serif);
+            font-size: 1rem;
+            font-style: italic;
+            color: rgba(244,234,208,0.58);
+        }
+        .btn-whatsapp-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: #25D366;
+            color: white;
+            padding: 0.9rem 1.75rem;
+            border-radius: 100px;
+            font-family: var(--font-sans);
+            font-size: 0.82rem;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: all 0.3s;
+            flex-shrink: 0;
+        }
+        .btn-whatsapp-cta:hover { background: #1daa55; transform: translateY(-2px); }
+
+        /* ── FOOTER ── */
+        footer {
+            background: var(--charcoal);
+            color: var(--cream);
+            padding: 3rem 3rem 2rem;
+        }
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        .footer-brand-sm {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .footer-logo-sm {
+            width: 44px; height: 44px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center 20%;
+            border: 1px solid rgba(244,234,208,0.12);
+        }
+        .footer-brand-sm span {
+            font-family: var(--font-display);
+            font-weight: 900;
+            font-size: 1.15rem;
+            color: var(--cream);
+        }
+        .footer-links-sm {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .footer-links-sm a {
+            font-family: var(--font-sans);
+            font-size: 0.73rem;
+            color: rgba(244,234,208,0.5);
+            text-decoration: none;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: color 0.2s;
+        }
+        .footer-links-sm a:hover { color: var(--accent); }
+        .footer-copy {
+            width: 100%;
+            font-family: var(--font-sans);
+            font-size: 0.65rem;
+            color: rgba(244,234,208,0.2);
+            border-top: 1px solid rgba(244,234,208,0.08);
+            padding-top: 1.25rem;
+            margin-top: 1rem;
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 960px) {
+            nav { padding: 0.85rem 1.5rem; }
+            .tabs-inner { padding: 0 1.5rem; }
+            .menu-content { padding: 2rem 1.5rem 4rem; }
+            .page-hero { padding: 3rem 1.5rem 2.5rem; }
+            .nav-links { display: none; }
+            .menu-toggle { display: flex; }
+            .nav-links.open {
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                inset: 0;
+                background: var(--charcoal);
+                justify-content: center;
+                align-items: center;
+                gap: 2.25rem;
+                z-index: 999;
+            }
+            .nav-links.open a { font-size: 1.15rem !important; color: var(--cream) !important; }
+            .close-btn {
+                position: absolute; top: 1.75rem; right: 1.75rem;
+                background: none; border: none; color: var(--cream);
+                font-size: 1.8rem; cursor: pointer; line-height: 1;
+            }
+            .drinks-cols { grid-template-columns: 1fr; gap: 0; }
+            .bottom-cta { flex-direction: column; text-align: center; }
+            .btn-whatsapp-cta { width: 100%; justify-content: center; }
+            .footer-inner { flex-direction: column; align-items: flex-start; }
+        }
+        @media (max-width: 580px) {
+            .page-hero-inner { flex-direction: column; align-items: flex-start; gap: 1.25rem; }
+            .page-hero-logo { width: 80px; height: 80px; }
+            .tapas-callout { flex-wrap: wrap; }
+            .tapas-callout-price { margin-left: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+    <a href="index.html" class="nav-brand">
+        <img src="photo_6001055991513943163_y.jpg" alt="La Malcriada logo" class="nav-logo-img">
+        <span class="nav-brand-name">La Malcriada</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+        <button class="close-btn" id="closeMenu" aria-label="Cerrar">✕</button>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html#about">Nosotros</a></li>
+        <li><a href="index.html#horario">Horario</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+        <li><a href="https://wa.me/34674439375?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20una%20mesa%20en%20La%20Malcriada." target="_blank" class="nav-cta">Reservar</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menú"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+    <div class="page-hero-watermark">CARTA</div>
+    <div class="page-hero-inner">
+        <img src="photo_6001055991513943163_y.jpg" alt="La Malcriada" class="page-hero-logo">
+        <div class="page-hero-text">
+            <div class="page-hero-tag">Bar de Tapas · Benalmádena</div>
+            <h1 class="page-hero-title">Nuestra<br><em>Carta</em></h1>
+            <p class="page-hero-sub">Elaboración casera · Tapas desde 2,50€ · Carta de temporada</p>
+        </div>
+    </div>
+</div>
+
+<!-- TABS -->
+<div class="tabs-bar">
+    <div class="tabs-inner">
+        <button class="tab-btn active" data-tab="comida">🍽️ Para comer</button>
+        <button class="tab-btn" data-tab="bebidas">🍺 Bebidas</button>
+        <button class="tab-btn" data-tab="peques">👶 Para los peques</button>
+    </div>
+</div>
+
+<!-- MENU CONTENT -->
+<div class="menu-content">
+
+    <!-- ═══ TAB: COMIDA ═══ -->
+    <div class="menu-section active" id="tab-comida">
+
+        <!-- TAPAS CALLOUT -->
+        <div class="tapas-callout">
+            <div class="tapas-callout-icon">🫒</div>
+            <div>
+                <div class="tapas-callout-title">Tapas del día</div>
+                <div class="tapas-callout-sub">Consulta nuestras variedades de tapas del día con el personal</div>
+            </div>
+            <div class="tapas-callout-price">2,50€</div>
+        </div>
+
+        <!-- PARA PICAR -->
+        <div class="cat-block">
+            <div class="cat-header">
+                <span class="cat-icon">🍗</span>
+                <span class="cat-title">Para picar</span>
+            </div>
+            <div class="items-list">
+                <div class="item-row">
+                    <div class="item-info">
+                        <div class="item-name">Tiras de pollo</div>
+                        <div class="item-detail">Con patatas fritas</div>
+                    </div>
+                    <div class="item-price">9,00€</div>
+                </div>
+                <div class="item-row">
+                    <div class="item-info">
+                        <div class="item-name">Croquetas caseras</div>
+                        <div class="item-detail">8 unidades · Trufa y boletus, o pollo</div>
+                    </div>
+                    <div class="item-price">8,50€</div>
+                </div>
+                <div class="item-row">
+                    <div class="item-info">
+                        <div class="item-name">Verdura en tempura</div>
+                        <div class="item-detail">Con miel de caña</div>
+                    </div>
+                    <div class="item-price">8,00€</div>
+                </div>
+                <div class="item-row">
+                    <div class="item-info">
+                        <div class="item-name">Palomitas de pollo</div>
+                        <div class="item-detail">Con mermelada de fresa</div>
+                    </div>
+                    <div class="item-price">8,00€</div>
+                </div>
+                <div class="item-row">
+                    <div class="item-info">
+                        <div class="item-name">Brioche de pulled pork</div>
+                        <div class="item-detail">3 unidades</div>
+                    </div>
+                    <div class="item-price">8,00€</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ALGO DE VERDE -->
+        <div class="cat-block">
+            <div class="cat-header">
+                <span class="cat-icon">🥗</span>
+                <span class="cat-title">Algo de verde</span>
+            </div>
+            <div class="items-list">
+                <div class="item-row">
+                    <div class="item-info">
+                        <div class="item-name">Ensalada Tropicana</div>
+                        <div class="item-detail">Pollo, aguacate y mango con vinagreta de mostaza y miel</div>
+                    </div>
+                    <div class="item-price">8,50€</div>
+                </div>
+                <div class="item-row">
+                    <div class="item-info">
+                        <div class="item-name">Ensalada Caperucita</div>
+                        <div class="item-detail">Queso de cabra, nueces, pasas con vinagreta de frutos rojos</div>
+                    </div>
+                    <div class="item-price">8,50€</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DEL MAR -->
+        <div class="cat-block">
+            <div class="cat-header">
+                <span class="cat-icon">🦐</span>
+                <span class="cat-title">Del mar</span>
+            </div>
+            <div class="items-list">
+                <div class="item-row">
+                    <div class="item-info">
+                        <div class="item-name">Rosada a la plancha</div>
+                        <div class="item-detail">Con aliño de lima, ajito y perejil</div>
+                    </div>
+                    <div class="item-price">10,50€</div>
+                </div>
+                <div class="item-row">
+                    <div class="item-info">
+                        <div class="item-name">Gambas rebozadas</div>
+                    </div>
+                    <div class="item-price">8,00€</div>
+                </div>
+                <div class="item-row">
+                    <div class="item-info">
+                        <div class="item-name">Twister de langostino</div>
+                    </div>
+                    <div class="item-price">8,50€</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TOSTAS -->
+        <div class="cat-block">
+            <div class="cat-header">
+                <span class="cat-icon">🥖</span>
+                <span class="cat-title">Tostas</span>
+            </div>
+            <div class="items-list">
+                <div class="item-row">
+                    <div class="item-info">
+                        <div class="item-name">Tosta "Cabrilla dulce"</div>
+                        <div class="item-detail">Queso de cabra con cebolla caramelizada y nueces</div>
+                    </div>
+                    <div class="item-price">9,00€</div>
+                </div>
+                <div class="item-row">
+                    <div class="item-info">
+                        <div class="item-name">Tosta "La Flamenca"</div>
+                        <div class="item-detail">Morcilla de cebolla, compota de manzana y albóndiga</div>
+                    </div>
+                    <div class="item-price">8,00€</div>
+                </div>
+                <div class="item-row">
+                    <div class="item-info">
+                        <div class="item-name">Tosta "Final con huevo"</div>
+                        <div class="item-detail">Mediterránea de huevos revueltos, tomate seco y albahaca</div>
+                    </div>
+                    <div class="item-price">8,00€</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- HECHO EN CASA -->
+        <div class="cat-block">
+            <div class="cat-header">
+                <span class="cat-icon">🏠</span>
+                <span class="cat-title">Hecho en casa</span>
+            </div>
+            <div class="items-list">
+                <div class="item-row">
+                    <div class="item-info">
+                        <div class="item-name">Ensaladilla rusa</div>
+                    </div>
+                    <div class="item-price">7,50€</div>
+                </div>
+                <div class="item-row">
+                    <div class="item-info">
+                        <div class="item-name">Patatas fritas con bacon y cheddar</div>
+                    </div>
+                    <div class="item-price">7,50€</div>
+                </div>
+                <div class="item-row">
+                    <div class="item-info">
+                        <div class="item-name">Huevos rotos</div>
+                    </div>
+                    <div class="item-price">9,00€</div>
+                </div>
+                <div class="item-row">
+                    <div class="item-info">
+                        <div class="item-name">Tartar de salchichón de Málaga</div>
+                    </div>
+                    <div class="item-price">9,50€</div>
+                </div>
+                <div class="item-row">
+                    <div class="item-info">
+                        <div class="item-name">Wrap de pollo César</div>
+                    </div>
+                    <div class="item-price">9,50€</div>
+                </div>
+                <div class="item-row">
+                    <div class="item-info">
+                        <div class="item-name">Albóndigas con tomate</div>
+                        <div class="item-detail">Con patatas fritas</div>
+                    </div>
+                    <div class="item-price">8,50€</div>
+                </div>
+                <div class="item-row">
+                    <div class="item-info">
+                        <div class="item-name">Pollo al curry</div>
+                        <div class="item-detail">Con arroz o patatas fritas</div>
+                    </div>
+                    <div class="item-price">8,50€</div>
+                </div>
+                <div class="item-row">
+                    <div class="item-info">
+                        <div class="item-name">Bocaditos maliciosos</div>
+                        <div class="item-detail">6 unidades</div>
+                    </div>
+                    <div class="item-price">8,00€</div>
+                </div>
+                <div class="item-row">
+                    <div class="item-info">
+                        <div class="item-name">Flamenquín cordobés</div>
+                        <div class="item-detail">Con patatas fritas</div>
+                    </div>
+                    <div class="item-price">10,50€</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PARA LOS CARNÍVOROS -->
+        <div class="cat-block">
+            <div class="cat-header cat-header pink-border">
+                <span class="cat-icon">🥩</span>
+                <span class="cat-title pink">Para los carnívoros</span>
+            </div>
+            <div class="items-list">
+                <div class="item-row">
+                    <div class="item-info">
+                        <div class="item-name">Secreto ibérico</div>
+                        <div class="item-detail">Con mojo de aceitunas</div>
+                    </div>
+                    <div class="item-price pink">14,50€</div>
+                </div>
+                <div class="item-row">
+                    <div class="item-info">
+                        <div class="item-name">Solomillo de cerdo al Pedro Ximénez</div>
+                    </div>
+                    <div class="item-price pink">13,00€</div>
+                </div>
+                <div class="item-row">
+                    <div class="item-info">
+                        <div class="item-name featured">Hamburguesa "La Malcriada" ★</div>
+                        <div class="item-detail">Queso cheddar, bacon, lechuga, tomate y cebolla caramelizada</div>
+                    </div>
+                    <div class="item-price pink">10,50€</div>
+                </div>
+                <div class="item-row">
+                    <div class="item-info">
+                        <div class="item-name">Hamburguesa "Crispy Chicken"</div>
+                        <div class="item-detail">Queso cheddar, lechuga y tomate</div>
+                    </div>
+                    <div class="item-price pink">9,50€</div>
+                </div>
+                <div class="item-row">
+                    <div class="item-info">
+                        <div class="item-name">Pollo teriyaki</div>
+                        <div class="item-detail">Con arroz</div>
+                    </div>
+                    <div class="item-price pink">10,50€</div>
+                </div>
+                <div class="item-row">
+                    <div class="item-info">
+                        <div class="item-name">Muslo de pollo deshuesado</div>
+                        <div class="item-detail">Con patatas o arroz</div>
+                    </div>
+                    <div class="item-price pink">10,50€</div>
+                </div>
+                <div class="item-row">
+                    <div class="item-info">
+                        <div class="item-name">Alitas de pollo BBQ</div>
+                        <div class="item-detail">Con patatas</div>
+                    </div>
+                    <div class="item-price pink">9,00€</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAN -->
+        <div class="pan-bar">
+            <span class="pan-bar-label">🍞 Servicio de pan</span>
+            <span class="pan-bar-price">0,50€</span>
+        </div>
+
+        <!-- POSTRES NOTE -->
+        <div class="allergens-note">
+            🍰 <strong>Postres:</strong> Pregunta por nuestras fantásticas tartas de queso artesanas del día — pistacho, Happy Hippo, Lotus, lemon pie y más sorpresas de temporada.
+        </div>
+
+        <div class="allergens-note" style="margin-top:1rem">
+            ⚠️ Si tienes alguna alergia o intolerancia alimentaria, por favor indícaselo al personal. Contamos con opciones sin gluten bajo petición.
+        </div>
+    </div>
+
+    <!-- ═══ TAB: BEBIDAS ═══ -->
+    <div class="menu-section" id="tab-bebidas">
+        <div class="drinks-cols">
+            <div>
+                <!-- BEBIDAS -->
+                <div class="cat-block">
+                    <div class="cat-header">
+                        <span class="cat-icon">🥤</span>
+                        <span class="cat-title">Bebidas</span>
+                    </div>
+                    <div class="items-list">
+                        <div class="item-row"><div class="item-info"><div class="item-name">Agua</div></div><div class="item-price">2,00€</div></div>
+                        <div class="item-row"><div class="item-info"><div class="item-name">Agua con gas</div></div><div class="item-price">2,50€</div></div>
+                        <div class="item-row"><div class="item-info"><div class="item-name">Coca-cola</div></div><div class="item-price">2,50€</div></div>
+                        <div class="item-row"><div class="item-info"><div class="item-name">Coca-cola Zero</div></div><div class="item-price">2,50€</div></div>
+                        <div class="item-row"><div class="item-info"><div class="item-name">Fanta naranja</div></div><div class="item-price">2,50€</div></div>
+                        <div class="item-row"><div class="item-info"><div class="item-name">Fanta limón</div></div><div class="item-price">2,50€</div></div>
+                        <div class="item-row"><div class="item-info"><div class="item-name">Sprite</div></div><div class="item-price">2,50€</div></div>
+                        <div class="item-row"><div class="item-info"><div class="item-name">Tónica</div></div><div class="item-price">2,50€</div></div>
+                        <div class="item-row"><div class="item-info"><div class="item-name">Nestea</div></div><div class="item-price">2,80€</div></div>
+                        <div class="item-row"><div class="item-info"><div class="item-name">Nestea maracuyá</div></div><div class="item-price">2,80€</div></div>
+                        <div class="item-row"><div class="item-info"><div class="item-name">Acuarius naranja</div></div><div class="item-price">2,80€</div></div>
+                        <div class="item-row"><div class="item-info"><div class="item-name">Acuarius limón</div></div><div class="item-price">2,80€</div></div>
+                        <div class="item-row"><div class="item-info"><div class="item-name">Zumos</div></div><div class="item-price">2,50€</div></div>
+                    </div>
+                </div>
+
+                <!-- VINOS -->
+                <div class="cat-block">
+                    <div class="cat-header">
+                        <span class="cat-icon">🍷</span>
+                        <span class="cat-title">Vino y cavas</span>
+                    </div>
+                    <div class="items-list">
+                        <div class="item-row"><div class="item-info"><div class="item-name">Copa Tinto</div></div><div class="item-price">2,80€</div></div>
+                        <div class="item-row"><div class="item-info"><div class="item-name">Copa Blanco</div></div><div class="item-price">2,80€</div></div>
+                        <div class="item-row"><div class="item-info"><div class="item-name">Sangría</div></div><div class="item-price">6,00€</div></div>
+                        <div class="item-row"><div class="item-info"><div class="item-name">Sangría blanca</div></div><div class="item-price">6,00€</div></div>
+                        <div class="item-row"><div class="item-info"><div class="item-name">Sangría cava</div></div><div class="item-price">6,50€</div></div>
+                        <div class="item-row"><div class="item-info"><div class="item-name">Cava (copa)</div></div><div class="item-price">3,00€</div></div>
+                        <div class="item-row"><div class="item-info"><div class="item-name">Botella Ribera</div></div><div class="item-price">20,00€</div></div>
+                        <div class="item-row"><div class="item-info"><div class="item-name">Botella Rioja</div></div><div class="item-price">15,00€</div></div>
+                        <div class="item-row"><div class="item-info"><div class="item-name">Botella Blanco</div></div><div class="item-price">15,00€</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <!-- CERVEZAS -->
+                <div class="cat-block">
+                    <div class="cat-header">
+                        <span class="cat-icon">🍺</span>
+                        <span class="cat-title">Cervezas</span>
+                    </div>
+                    <div class="items-list">
+                        <div class="item-row"><div class="item-info"><div class="item-name">Victoria</div></div><div class="item-price">3,00€</div></div>
+                        <div class="item-row"><div class="item-info"><div class="item-name">Victoria 10</div></div><div class="item-price">3,50€</div></div>
+                        <div class="item-row"><div class="item-info"><div class="item-name">Victoria 0,0</div></div><div class="item-price">3,00€</div></div>
+                        <div class="item-row"><div class="item-info"><div class="item-name">Victoria 0,0 tostada</div></div><div class="item-price">3,50€</div></div>
+                        <div class="item-row"><div class="item-info"><div class="item-name">Alambra verde</div></div><div class="item-price">3,50€</div></div>
+                        <div class="item-row"><div class="item-info"><div class="item-name">Coronita</div></div><div class="item-price">3,50€</div></div>
+                        <div class="item-row"><div class="item-info"><div class="item-name">Daura Sin gluten</div></div><div class="item-price">3,50€</div></div>
+                    </div>
+                </div>
+
+                <!-- CÓCTELES -->
+                <div class="cat-block">
+                    <div class="cat-header cat-header pink-border">
+                        <span class="cat-icon">🍹</span>
+                        <span class="cat-title pink">Cócteles</span>
+                    </div>
+                    <div class="items-list">
+                        <div class="item-row"><div class="item-info"><div class="item-name">Sex On The Beach</div></div><div class="item-price pink">7,00€</div></div>
+                        <div class="item-row"><div class="item-info"><div class="item-name">Margarita</div></div><div class="item-price pink">7,00€</div></div>
+                        <div class="item-row"><div class="item-info"><div class="item-name">San Francisco</div></div><div class="item-price pink">6,00€</div></div>
+                        <div class="item-row"><div class="item-info"><div class="item-name">Espresso Martini</div></div><div class="item-price pink">7,00€</div></div>
+                        <div class="item-row"><div class="item-info"><div class="item-name">Porn Star Martini</div></div><div class="item-price pink">7,00€</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ TAB: PEQUES ═══ -->
+    <div class="menu-section" id="tab-peques">
+        <div class="cat-block">
+            <div class="cat-header">
+                <span class="cat-icon">👶</span>
+                <span class="cat-title">Para los más peques</span>
+            </div>
+            <div class="items-list">
+                <div class="item-row">
+                    <div class="item-info">
+                        <div class="item-name">Mini hamburguesa</div>
+                        <div class="item-detail">Con patatas fritas</div>
+                    </div>
+                    <div class="item-price">6,00€</div>
+                </div>
+                <div class="item-row">
+                    <div class="item-info">
+                        <div class="item-name">Salchichas</div>
+                        <div class="item-detail">Con patatas fritas</div>
+                    </div>
+                    <div class="item-price">6,00€</div>
+                </div>
+            </div>
+        </div>
+        <div class="allergens-note">
+            🎉 ¿Celebráis algo especial? Pregúntanos por nuestras opciones para grupos familiares. Estamos encantados de adaptarnos.
+        </div>
+    </div>
+
+    <!-- BOTTOM CTA -->
+    <div class="bottom-cta">
+        <div class="bottom-cta-text">
+            <h3>¿Te ha entrado el hambre?</h3>
+            <p>Reserva tu mesa y te preparamos todo para cuando llegues.</p>
+        </div>
+        <a href="https://wa.me/34674439375?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20una%20mesa%20en%20La%20Malcriada." target="_blank" class="btn-whatsapp-cta">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Reservar por WhatsApp
+        </a>
+    </div>
+
+</div><!-- end menu-content -->
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand-sm">
+            <img src="photo_6001055991513943163_y.jpg" alt="La Malcriada" class="footer-logo-sm">
+            <span>La Malcriada</span>
+        </div>
+        <div class="footer-links-sm">
+            <a href="index.html">Inicio</a>
+            <a href="index.html#horario">Horario</a>
+            <a href="index.html#contacto">Contacto</a>
+            <a href="https://www.instagram.com/la.malcriada.benalmadena/" target="_blank">Instagram</a>
+            <a href="https://wa.me/34674439375" target="_blank">WhatsApp</a>
+        </div>
+        <div class="footer-copy">
+            © 2025 La Malcriada Benalmádena · C. Luis Vives, 11 · 29630 Benalmádena · Carta sujeta a cambios sin previo aviso
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Mobile menu
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    const closeMenu = document.getElementById('closeMenu');
+    menuToggle.addEventListener('click', () => navLinks.classList.add('open'));
+    closeMenu.addEventListener('click', () => navLinks.classList.remove('open'));
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+    // Tabs
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabSections = document.querySelectorAll('.menu-section');
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const target = btn.dataset.tab;
+            tabBtns.forEach(b => b.classList.remove('active'));
+            tabSections.forEach(s => s.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById('tab-' + target).classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    });
+</script>
+</body>
+</html>
