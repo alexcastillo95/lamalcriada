@@ -640,7 +640,7 @@
         .contact-icon {
             width: 40px; height: 40px;
             background: var(--accent-faint);
-            border: 1px solid rgba(0,196,180,0.18);
+            border: 1px solid rgba(196,133,58,0.18);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -811,16 +811,25 @@
             .hero-inner { flex-direction: column; padding: 7rem 1.5rem 4rem; text-align: center; align-items: center; }
             .hero-label { justify-content: center; }
             .hero-actions { justify-content: center; }
-            .hero-aside { order: -1; }
-            .hero-logo-img { width: 120px; height: 120px; }
+            .hero-aside { display: none; }
+            .hero-watermark { font-size: clamp(88px, 30vw, 160px); color: rgba(255,255,255,0.062); bottom: 0; right: -4%; }
             .about-grid, .horario-grid, .contacto-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .about-card, .reserva-card { padding: 1.75rem; }
+            .plato-row { gap: 0.85rem; }
+            .plato-row:hover { padding-left: 0; }
+            .plato-num { font-size: 2rem; width: 2.4rem; }
+            .plato-arrow { display: none; }
             .footer-top { flex-direction: column; }
-            .footer-bottom { flex-direction: column; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+            .footer-cols { gap: 2rem; }
         }
         @media (max-width: 580px) {
-            .dishes-grid { grid-template-columns: 1fr; }
             .hero-actions { flex-direction: column; align-items: center; width: 100%; }
             .hero-actions a { text-align: center; justify-content: center; }
+            .hero-watermark { font-size: clamp(78px, 32vw, 120px); }
+            .plato-name { font-size: 1.05rem; }
+            .plato-price { font-size: 1rem; white-space: normal; }
+            .plato-desc { font-size: 0.88rem; }
             footer { padding: 3rem 1.5rem 2rem; }
         }
     </style>
